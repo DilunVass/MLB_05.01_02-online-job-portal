@@ -1,0 +1,35 @@
+#include<iostream>
+#include <string.h>
+#include "Inquiries.h"
+Using namespace std;
+
+class Coordinator
+{
+  private:
+    int coordinator_ID;
+    string coordinator_email[50];
+    char coordinator_username;
+    string coordinator_password[50];
+
+  public:
+    Coordinator();
+    Coordinator(int co_ID, string co_email[50],char co_username, string co_password[50]);
+    void login();
+    void collect_inquiries();
+    void find_solution();
+    Inquiries* inquire;
+    ~Coordinator();
+};
+
+class Inquires{
+  private:
+    int inquire_ID;
+    string inquire_description[50];
+    string inquire_date[20];
+
+  public:
+    Inquires();
+    Inquires(int inquire_ID, string inquire_discrip, string inquire_date);
+    void check_inquire();
+    ~Inquires();
+};
