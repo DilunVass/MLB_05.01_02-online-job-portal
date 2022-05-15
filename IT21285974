@@ -1,0 +1,44 @@
+//Guest user class and methods
+
+#include"Job.h"
+class GuestUser
+{
+  protected:
+    char guest_name[20];
+    char guest_email[40];
+    char guest_contact_no[11];
+
+  public:
+    GuestUser();
+    GuestUser( const char g_name[], const char g_email[], const char g_contact_no[]);
+    void register_Guest();
+    void search_job(Job *J1);
+    void display_details();
+    ~GuestUser();
+};
+
+
+//Admin class and methods
+
+#include "Inquiries"
+
+class Admin
+{
+  private:
+    int admin_ID;
+    char admin_email[50];
+    char admin_username[50];
+    char admin_password[50];
+    Inquiries *I1;
+
+  public:
+    Admin();
+    Admin(int a_id, const char a_email[], const char a_uname[], const char a_pass[]);
+    void login();
+    void check_inquiries(Inquiries *nI1);
+    void approve_appli();
+    void find_solution();
+    void change_con();
+    ~Admin();
+};
+
