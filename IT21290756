@@ -1,0 +1,32 @@
+//Job seeker Class
+class JobSeeker
+{
+private:
+    int jobseeker_ID;
+    char jobseeker_email[50];
+    char jobseeker_username[50];
+    char jobseeker_password[50];
+
+public:
+    JobSeeker();
+    JobSeeker(int js_ID, const char js_email[], const char js_username[], const char js_password[]);
+    void login();
+    void display_dashboard();
+    void apply_jobs();
+    void add_feedback();
+    void update_profile();
+};
+
+
+//Profile Class
+class Profiles {
+private:
+    char profile_type[50];
+
+public:
+    Profiles();
+    Profiles(const char p_type[]);
+    void add_acc();
+    void update_acc();
+
+};
