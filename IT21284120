@@ -1,0 +1,53 @@
+//Co-admin Class 
+class Co_admin
+{
+private:
+
+    int co_admin_ID;
+    char co_admin_email[50];
+    char co_admin_username[50];
+    char co_admin_password[20];
+
+public:
+
+    Co_admin();
+    Co_admin(int co_ID, const char co_email[], const char co_username[], const char co_password[]);
+    void login();
+    void check_payment();
+    void manage_users();
+    void manage_job();
+
+};
+
+
+//Payment Class
+class Payment
+{
+private:
+    int payment_ID;
+    int payment_amount;
+    char payment_date[10];
+    char payment_type[10];
+
+public:
+    Payment();
+    Payment(int p_ID, int p_amount, const char p_date[], const char p_type[]);
+    void check_payment();
+    void display_payment();
+
+};
+
+
+//Feedback Class
+class Feedback
+{
+
+private:
+    int feedback_ID;
+
+public:
+    Feedback();
+    void check_feedback();
+    void display_feedback();
+
+};
